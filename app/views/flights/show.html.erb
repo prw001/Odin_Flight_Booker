@@ -1,0 +1,21 @@
+<title>Flight #<%= params['flight_code'] %> Details</title>
+
+<h3>Showing details for flight #<%= params['flight_code'] %></h3>
+
+<div>
+	<ul>
+		<li>
+			Departs from: <%= @flight.departs_loc.code %> on <%= @flight.departs_date %>
+		</li>
+		<li>
+			Duration: <%= @flight.duration %>
+		</li>
+		<li>
+			Arrives at: <%= @flight.arrives_loc.code %> on <%= @flight.arrives_date %>
+		</li>
+	</ul>
+</div>
+
+<div>
+	<%= link_to "Home", flights_path %>
+</div>

@@ -1,0 +1,41 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+h2{
+	text-align: center;
+}
+
+/* flight table */
+
+#flights_table{
+	position: relative;
+	margin-right: 300px;
+	float:right;
+
+}
+
+th{
+	text-align: center;
+	padding: 4px;
+}
+
+#main_header_row{
+	border-collapse: collapse;
+}
+
+#main_header_cell{
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+tr{
+	
+}
+
+.flights_cell{
+	text-align: center;
+	padding: 4px;
+}
