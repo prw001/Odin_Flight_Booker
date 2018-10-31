@@ -23,6 +23,9 @@ airports = Airport.all.shuffle
 	depart = airports[n]
 	arrive = airports[n + 1]
 	date = "#{rand(1..30)}_#{Date::MONTHNAMES[rand(1..12)].slice(0, 3).upcase}_2019"
+	if date[0..1].match(/[1-9]+\_/)
+		date.insert(0, '0')
+	end
 	duration = "#{rand(0..6)}HR_#{rand(0..59)}MIN"
 	Flight.create!(code: code,
 				   departs_loc: depart,

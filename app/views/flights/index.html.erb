@@ -7,5 +7,10 @@
 </div>
 
 <div id="table_container">
-	<%= render partial: 'flights/flights_table' %>
+	<% if @flights %>
+		<%= render partial: 'flights/flights_table' %>
+	<% else %>
+		No flights match your search query. Try a different search.
+	<% end %>
 </div>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>

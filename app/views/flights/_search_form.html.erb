@@ -1,0 +1,22 @@
+<h3>Search for Flights</h3>
+<%= form_tag('/flights', method: :get) do %>
+
+	<%= hidden_field_tag 'search', true %>
+	
+	<%= label_tag "Select Departure Location" %>
+	<%= select_tag "depart_loc", options_from_collection_for_select(
+								 Airport.all, "code", "code") %>
+	<br>
+	<%= label_tag "Select Arrival Location" %>
+	<%= select_tag "arrival_loc", options_from_collection_for_select(
+								  Airport.all, "code", "code") %>
+	<br>
+	<%= label_tag "Input Departure Date" %>
+	<%= date_field_tag "date", "01/01/#{Time.now.year + 1}" %>
+	<br>
+	<%= label_tag "Select number of passengers" %>
+	<%= select_tag "num_passengers", options_for_select([1..4], 1) %>
+	<br>
+	<%= submit_tag "Search" %>
+
+<% end %>
